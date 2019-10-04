@@ -47,6 +47,7 @@ export default {
 
 body {
   background-color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
@@ -71,6 +72,15 @@ body {
   text-align: center;
 }
 
+.totalSavings h2 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.totalSavings p {
+  font-size: 40px;
+}
+
 .transactions {
   padding-top: 40px;
 }
@@ -88,8 +98,26 @@ body {
   justify-content: center;
   align-items: center;
   height: 90px;
-  background-color: #813baf;
   color: #fff;
   border-radius: 20px;
+}
+
+.totalIncome {
+  background-color: #813baf;
+}
+
+.totalExpenses {
+  background-color: #5544cc;
+}
+
+.totalIncome h2,
+.totalExpenses h2 {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.totalIncome p,
+.totalExpenses p {
+  font-size: 25px;
 }
 </style>
