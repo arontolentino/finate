@@ -1,4 +1,6 @@
-# finate
+
+# Finate
+![Mockup of Finate](https://i.imgur.com/T608Ksr.png)
 
 ## Project setup
 ```
