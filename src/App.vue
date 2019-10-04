@@ -63,7 +63,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 250px;
-  background-color: #3827b4;
+  background-image: linear-gradient(#3827b4, hsla(276, 74%, 37%, 0.6));
   color: #fff;
 }
 
