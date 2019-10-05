@@ -18,9 +18,14 @@
           </div>
           <div class="transactionList">
             <ul>
-              <li>Transaction 1</li>
-              <li>Transaction 2</li>
-              <li>Transaction 1</li>
+              <li v-for="(income, index) in incomeList" :key="index">
+                <div class="icon">{{ income.icon }}</div>
+                <div class="description">
+                  <div class="date">{{ income.date }}</div>
+                  <div class="name">{{ income.desc }}</div>
+                </div>
+                <div class="amount">${{ income.amount }}</div>
+              </li>
             </ul>
           </div>
         </div>
@@ -30,14 +35,18 @@
             <h2>Total Expenses</h2>
             <p>$1,680.96</p>
           </div>
-          <div class="expenseTransactions">
-            <div class="transactionList">
-              <ul>
-                <li>Transaction 1</li>
-                <li>Transaction 2</li>
-                <li>Transaction 1</li>
-              </ul>
-            </div>
+
+          <div class="transactionList">
+            <ul>
+              <li v-for="(income, index) in incomeList" :key="index">
+                <div class="icon">{{ income.icon }}</div>
+                <div class="description">
+                  <div class="date">{{ income.date }}</div>
+                  <div class="name">{{ income.desc }}</div>
+                </div>
+                <div class="amount">-${{ income.amount }}</div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -49,7 +58,48 @@
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      incomeList: [
+        {
+          icon: "Icon",
+          date: "October 4, 2019",
+          desc: "Item 1",
+          amount: 132.94
+        },
+        {
+          icon: "Icon",
+          date: "October 5, 2019",
+          desc: "Item 2",
+          amount: 183.29
+        },
+        {
+          icon: "Icon",
+          date: "October 6, 2019",
+          desc: "Item 3",
+          amount: 302.12
+        }
+      ],
+      expenseList: [
+        {
+          icon: "Icon",
+          date: "October 4, 2019",
+          desc: "Item 1",
+          amount: 132.94
+        },
+        {
+          icon: "Icon",
+          date: "October 5, 2019",
+          desc: "Item 2",
+          amount: 183.29
+        },
+        {
+          icon: "Icon",
+          date: "October 6, 2019",
+          desc: "Item 3",
+          amount: 302.12
+        }
+      ]
+    };
   },
   methods: {}
 };
@@ -143,10 +193,46 @@ body {
   border-radius: 20px;
   margin-top: 22px;
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.08);
-  padding: 22px;
+  padding: 7.5px 22px;
 }
 
 .transactionList ul {
   list-style: none;
+}
+
+.transactionList li:not(:last-child) {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.transactionList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 17.5px 10px;
+  font-weight: 300;
+}
+
+.icon {
+  width: 10%;
+}
+
+.description {
+  width: 55%;
+}
+
+.name {
+  color: #a3a2ac;
+}
+
+.amount {
+  width: 20%;
+  text-align: right;
+}
+
+.income .amount {
+  color: #3827b4;
+}
+
+.expenses .amount {
+  color: #e61ead;
 }
 </style>
