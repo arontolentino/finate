@@ -6,7 +6,9 @@
         <p>$7,467.25</p>
       </div>
     </div>
+
     <div class="input"></div>
+
     <div class="transactions">
       <div class="wrapper">
         <div class="income">
@@ -14,14 +16,29 @@
             <h2>Total Income</h2>
             <p>$9,148.20</p>
           </div>
-          <div class="incomeTransactions"></div>
+          <div class="transactionList">
+            <ul>
+              <li>Transaction 1</li>
+              <li>Transaction 2</li>
+              <li>Transaction 1</li>
+            </ul>
+          </div>
         </div>
+
         <div class="expenses">
           <div class="totalExpenses">
             <h2>Total Expenses</h2>
             <p>$1,680.96</p>
           </div>
-          <div class="expenseTransactions"></div>
+          <div class="expenseTransactions">
+            <div class="transactionList">
+              <ul>
+                <li>Transaction 1</li>
+                <li>Transaction 2</li>
+                <li>Transaction 1</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -54,7 +71,6 @@ body {
   max-width: 870px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 0 auto;
 }
 
@@ -88,7 +104,6 @@ body {
 .income,
 .expenses {
   width: 405px;
-  text-align: center;
 }
 
 .totalIncome,
@@ -97,9 +112,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 90px;
   color: #fff;
   border-radius: 20px;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.08);
 }
 
 .totalIncome {
@@ -119,5 +136,17 @@ body {
 .totalIncome p,
 .totalExpenses p {
   font-size: 25px;
+}
+
+.transactionList {
+  background-color: #fff;
+  border-radius: 20px;
+  margin-top: 22px;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.08);
+  padding: 22px;
+}
+
+.transactionList ul {
+  list-style: none;
 }
 </style>
