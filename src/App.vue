@@ -7,14 +7,30 @@
       </div>
       <div class="input">
         <div class="wrapper">
-          <input type="date" placeholder="Date" />
-          <input type="text" placeholder="Description" />
-          <select>
-            <option disabled value>Please select one</option>
-            <option>Income</option>
-            <option>Expense</option>
-          </select>
-          <input type="number" placeholder="Amount" />
+          <div class="inputContainer">
+            <input
+              placeholder="Date"
+              class="textbox-n"
+              type="text"
+              onfocus="(this.type='date')"
+              id="date"
+            />
+          </div>
+          <div class="inputContainer">
+            <input type="text" placeholder="Description" />
+          </div>
+
+          <div class="inputContainer">
+            <select>
+              <option disabled selected>Transaction Type</option>
+              <option>Income</option>
+              <option>Expense</option>
+            </select>
+          </div>
+
+          <div class="inputContainer">
+            <input type="number" placeholder="Amount" />
+          </div>
         </div>
       </div>
     </div>
@@ -166,9 +182,33 @@ body {
   height: 80px;
   background-color: #fff;
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.08);
-  display: flex;
-  justify-content: space-between;
-  padding: 24px;
+  padding: 24px 45px;
+}
+
+.inputContainer {
+  padding: 3px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+input,
+select {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  border: none;
+  color: #a3a2ac;
+}
+
+::placeholder {
+  color: #a3a2ac;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+select {
+  background-color: #fff;
 }
 
 .transactions {
