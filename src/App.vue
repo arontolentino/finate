@@ -5,9 +5,19 @@
         <h2>Total Savings</h2>
         <p>$7,467.25</p>
       </div>
+      <div class="input">
+        <div class="wrapper">
+          <input type="date" placeholder="Date" />
+          <input type="text" placeholder="Description" />
+          <select>
+            <option disabled value>Please select one</option>
+            <option>Income</option>
+            <option>Expense</option>
+          </select>
+          <input type="number" placeholder="Amount" />
+        </div>
+      </div>
     </div>
-
-    <div class="input"></div>
 
     <div class="transactions">
       <div class="wrapper">
@@ -125,11 +135,12 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 300px;
   background-image: linear-gradient(#3827b4, hsla(276, 74%, 37%, 0.6));
   color: #fff;
 }
@@ -147,8 +158,21 @@ body {
   font-size: 40px;
 }
 
+.input {
+  position: absolute;
+  bottom: -40px;
+  width: 870px;
+  border-radius: 20px;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
 .transactions {
-  padding-top: 40px;
+  padding-top: 77px;
 }
 
 .income,
